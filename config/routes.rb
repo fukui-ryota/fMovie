@@ -1,0 +1,12 @@
+Rails.application.routes.draw do
+  get 'top' => 'home#top'
+  get 'login' => 'home#login'
+  get 'signup' => 'home#signup'
+  get 'movies' => 'home#movies'
+  get 'genre' => 'home#genre'
+  get 'search' => 'home#search'
+  get 'amazon' => 'home#amazon'
+  get 'unext' => 'home#unext'
+  get 'netflix' => 'home#netflix'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
