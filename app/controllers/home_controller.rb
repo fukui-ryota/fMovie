@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def top
+    @movies = Movie.all.order(id: :desc).limit(3)
   end
   
   def login

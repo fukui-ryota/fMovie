@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  screening_time: 1
+  screening_date: 2021-02-18
+  thumbnail_url: MyText
+
+two:
+  title: MyString
+  description: MyText
+  screening_time: 1
+  screening_date: 2021-02-18
+  thumbnail_url: MyText

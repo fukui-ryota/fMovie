@@ -12,26 +12,18 @@
     <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <% @movies.each_with_index do |movie, i| %>
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="<%= i == 0 ? 'active' : '' %>"></li>
+        <% end %>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="https://d2ueuvlup6lbue.cloudfront.net/attachments/9fd6f2937233b6ff9f4f8950494357b0e5ba6782/store/fitpad/300/400/602643410621dccb9cac41f90c5fa0c50956c53e2b32558e94adfa3310fa/_.jpg" class="mw-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+        <% @movies.each_with_index do |movie, i| %>
+          <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
+            <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img style="height: 400px; width: 100%; object-fit: contain; background-color: dimgray;" src="https://d2ueuvlup6lbue.cloudfront.net/attachments/9fd6f2937233b6ff9f4f8950494357b0e5ba6782/store/fitpad/300/400/602643410621dccb9cac41f90c5fa0c50956c53e2b32558e94adfa3310fa/_.jpg" class="mw-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img style="height: 400px; width: 100%; object-fit: contain; background-color: gray;" src="https://d2ueuvlup6lbue.cloudfront.net/attachments/9fd6f2937233b6ff9f4f8950494357b0e5ba6782/store/fitpad/300/400/602643410621dccb9cac41f90c5fa0c50956c53e2b32558e94adfa3310fa/_.jpg" class="mw-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
+        <% end %>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
