@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'top' => 'home#top'
+  devise_for :users
+  get '' => 'home#top'
   get 'login' => 'home#login'
   get 'signup' => 'home#signup'
   get 'movies' => 'home#movies'
