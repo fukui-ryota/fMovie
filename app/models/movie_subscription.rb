@@ -1,0 +1,2 @@
+class MovieSubscription < ApplicationRecord
+end
