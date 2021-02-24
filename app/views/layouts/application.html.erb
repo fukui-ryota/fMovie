@@ -35,9 +35,11 @@
               <%= link_to "ログイン", new_user_session_path, class: 'nav-link' %>
             <% end %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup">会員登録</a>
-          </li>
+          <% unless user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "会員登録", new_user_registration_path, class: 'nav-link' %>
+            </li>
+          <% end %>
         </ul>
       </div>
       </div>
