@@ -90,20 +90,739 @@
 end
 [
   {
-    id: 1
-    name: Amazon_Prime_Video
+    id: 1,
+    name: "Amazon_Prime_Video",
   },
   {
-    id: 2
-    name: U_NEXT
+    id: 2,
+    name: "U_NEXT",
   },
   {
-    id: 3
-    name: Netflix
+    id: 3,
+    name: "Netflix",
   },
 ].each do |data|
   subscription = Subscription.find_or_initialize_by(id: data[:id])
-  subscription.string = data[:string]
+  subscription.name = data[:name]
   subscription.save!
 end
-]
+[
+  {
+    id: 1,
+    movie_id: 1,
+    subscription_id: 1,
+  },
+  {
+    id: 2,
+    movie_id: 1,
+    subscription_id: 2,
+  },
+  {
+    id: 3,
+    movie_id: 1,
+    subscription_id: 3,
+  },
+  {
+    id: 4,
+    movie_id: 2,
+    subscription_id: 1,
+  },
+  {
+    id: 5,
+    movie_id: 3,
+    subscription_id: 1,
+  },
+  {
+    id: 6,
+    movie_id: 3,
+    subscription_id: 2,
+  },
+  {
+    id: 7,
+    movie_id: 3,
+    subscription_id: 3,
+  },
+  {
+    id: 8,
+    movie_id: 4,
+    subscription_id: 1,
+  },
+  {
+    id: 9,
+    movie_id: 5,
+    subscription_id: 2,
+  },
+  {
+    id: 10,
+    movie_id: 5,
+    subscription_id: 3,
+  },
+  {
+    id: 11,
+    movie_id: 6,
+    subscription_id: 1,
+  },
+  {
+    id: 12,
+    movie_id: 6,
+    subscription_id: 2,
+  },
+  {
+    id: 13,
+    movie_id: 6,
+    subscription_id: 3,
+  },
+  {
+    id: 14,
+    movie_id: 7,
+    subscription_id: 1,
+  },
+  {
+    id: 15,
+    movie_id: 7,
+    subscription_id: 3,
+  },
+  {
+    id: 16,
+    movie_id: 8,
+    subscription_id: 1,
+  },
+  {
+    id: 17,
+    movie_id: 8,
+    subscription_id: 2,
+  },
+  {
+    id: 18,
+    movie_id: 8,
+    subscription_id: 3,
+  },
+  {
+    id: 19,
+    movie_id: 9,
+    subscription_id: 1,
+  },
+  {
+    id: 20,
+    movie_id: 9,
+    subscription_id: 2,
+  },
+  {
+    id: 21,
+    movie_id: 10,
+    subscription_id: 1,
+  },
+  {
+    id: 22,
+    movie_id: 10,
+    subscription_id: 2,
+  },
+  {
+    id: 23,
+    movie_id: 10,
+    subscription_id: 3,
+  },
+].each do |data|
+  movie_subscription = MovieSubscription.find_or_initialize_by(id: data[:id])
+  movie_subscription.movie_id = data[:movie_id]
+  movie_subscription.subscription_id = data[:subscription_id]
+  movie_subscription.save!
+end
+[
+  {
+    id: 1,
+    name: "クリストファー・マッカリー",
+  },
+  {
+    id: 2,
+    name: "マシュー・ヴォーン",
+  },
+  {
+    id: 3,
+    name: "スタンリー・キューブリック",
+  },
+  {
+    id: 4,
+    name: "チャド・スタエルスキー",
+  },
+  {
+    id: 5,
+    name: "富野由悠季",
+  },
+  {
+    id: 6,
+    name: "クリストファー・ノーラン",
+  },
+  {
+    id: 7,
+    name: "サム・メンデス",
+  },
+  {
+    id: 8,
+    name: "コリー・ユン",
+  },
+  {
+    id: 9,
+    name: "ルイ・レテリエ",
+  },
+  {
+    id: 10,
+    name: "F・ゲイリー・グレイ",
+  },
+].each do |data|
+  directors = Director.find_or_initialize_by(id: data[:id])
+  directors.name = data[:name]
+  directors.save!
+end
+[
+  {
+    id: 1,
+    movie_id: 1,
+    director_id: 1,
+  },
+  {
+    id: 2,
+    movie_id: 2,
+    director_id: 2,
+  },
+  {
+    id: 3,
+    movie_id: 3,
+    director_id: 3,
+  },
+  {
+    id: 4,
+    movie_id: 4,
+    director_id: 4,
+  },
+  {
+    id: 5,
+    movie_id: 5,
+    director_id: 5,
+  },
+  {
+    id: 6,
+    movie_id: 6,
+    director_id: 6,
+  },
+  {
+    id: 7,
+    movie_id: 7,
+    director_id: 7,
+  },
+  {
+    id: 8,
+    movie_id: 8,
+    director_id: 8,
+  },
+  {
+    id: 9,
+    movie_id: 9,
+    director_id: 9,
+  },
+  {
+    id: 10,
+    movie_id: 9,
+    director_id: 10,
+  },
+  {
+    id: 11,
+    movie_id: 10,
+    director_id: 6,
+  },
+].each do |data|
+  movie_directors = MovieDirector.find_or_initialize_by(id: data[:id])
+  movie_directors.movie_id = data[:movie_id]
+  movie_directors.director_id = data[:director_id]
+  movie_directors.save!
+end
+[
+  {
+    id: 1,
+    name: "トム・クルーズ",
+  },
+  {
+    id: 2,
+    name: "ジェレミー・レナー",
+  },
+  {
+    id: 3,
+    name: "レベッカ・ファーガソン",
+  },
+  {
+    id: 4,
+    name: "サイモン・ペッグ",
+  },
+  {
+    id: 5,
+    name: "タロン・エガートン",
+  },
+  {
+    id: 6,
+    name: "コリン・ファース",
+  },
+  {
+    id: 7,
+    name: "サミュエル・L・ジャクソン",
+  },
+  {
+    id: 8,
+    name: "マーク・ストロング",
+  },
+  {
+    id: 9,
+    name: "ジャック・ニコルソン",
+  },
+  {
+    id: 10,
+    name: "シェリー・デュヴァル",
+  },
+  {
+    id: 11,
+    name: "ダニー・ロイド",
+  },
+  {
+    id: 12,
+    name: "スキャットマン・クローザース",
+  },
+  {
+    id: 13,
+    name: "キアヌ・リーヴス",
+  },
+  {
+    id: 14,
+    name: "ミカエル・ニクヴィスト",
+  },
+  {
+    id: 15,
+    name: "アルフィー・アレン",
+  },
+  {
+    id: 16,
+    name: "ウィレム・デフォー",
+  },
+  {
+    id: 17,
+    name: "辻谷耕史",
+  },
+  {
+    id: 18,
+    name: "冬馬由美",
+  },
+  {
+    id: 19,
+    name: "松野太紀",
+  },
+  {
+    id: 20,
+    name: "神代知衣",
+  },
+  {
+    id: 21,
+    name: "レオナルド・ディカプリオ",
+  },
+  {
+    id: 22,
+    name: "渡辺謙",
+  },
+  {
+    id: 23,
+    name: "ジョセフ・ゴードン=レヴィット",
+  },
+  {
+    id: 24,
+    name: "マリオン・コティヤール",
+  },
+  {
+    id: 25,
+    name: "ケイト・ウィンスレット",
+  },
+  {
+    id: 26,
+    name: "キャシー・ベイツ",
+  },
+  {
+    id: 27,
+    name: "マイケル・シャノン",
+  },
+  {
+    id: 28,
+    name: "ジェイソン・ステイサム",
+  },
+  {
+    id: 29,
+    name: "スー・チー",
+  },
+  {
+    id: 30,
+    name: "フランソワ・ベルレアン",
+  },
+  {
+    id: 31,
+    name: "マット・シュルツ",
+  },
+  {
+    id: 32,
+    name: "ヴィン・ディーゼル",
+  },
+  {
+    id: 33,
+    name: "ドウェイン・ジョンソン",
+  },
+  {
+    id: 34,
+    name: "ミシェル・ロドリゲス",
+  },
+  {
+    id: 35,
+    name: "マシュー・マコノヒー",
+  },
+  {
+    id: 36,
+    name: "アン・ハサウェイ",
+  },
+  {
+    id: 37,
+    name: "ジェシカ・チャステイン",
+  },
+  {
+    id: 38,
+    name: "マイケル・ケイン",
+  },
+].each do |data|
+  performer = Performer.find_or_initialize_by(id: data[:id])
+  performer.name = data[:name]
+  performer.save!
+end
+[
+  {
+    id: 1,
+    movie_id: 1,
+    performer_id: 1,
+  },
+  {
+    id: 2,
+    movie_id: 1,
+    performer_id: 2,
+  },
+  {
+    id: 3,
+    movie_id: 1,
+    performer_id: 3,
+  },
+  {
+    id: 4,
+    movie_id: 1,
+    performer_id: 4,
+  },
+  {
+    id: 5,
+    movie_id: 2,
+    performer_id: 5,
+  },
+  {
+    id: 6,
+    movie_id: 2,
+    performer_id: 6,
+  },
+  {
+    id: 7,
+    movie_id: 2,
+    performer_id: 7,
+  },
+  {
+    id: 8,
+    movie_id: 2,
+    performer_id: 8,
+  },
+  {
+    id: 9,
+    movie_id: 3,
+    performer_id: 9,
+  },
+  {
+    id: 10,
+    movie_id: 3,
+    performer_id: 10,
+  },
+  {
+    id: 11,
+    movie_id: 3,
+    performer_id: 11,
+  },
+  {
+    id: 12,
+    movie_id: 3,
+    performer_id: 12,
+  },
+  {
+    id: 13,
+    movie_id: 4,
+    performer_id: 13,
+  },
+  {
+    id: 14,
+    movie_id: 4,
+    performer_id: 14,
+  },
+  {
+    id: 15,
+    movie_id: 4,
+    performer_id: 15,
+  },
+  {
+    id: 16,
+    movie_id: 4,
+    performer_id: 16,
+  },
+  {
+    id: 17,
+    movie_id: 5,
+    performer_id: 17,
+  },
+  {
+    id: 18,
+    movie_id: 5,
+    performer_id: 18,
+  },
+  {
+    id: 19,
+    movie_id: 5,
+    performer_id: 19,
+  },
+  {
+    id: 20,
+    movie_id: 5,
+    performer_id: 20,
+  },
+  {
+    id: 21,
+    movie_id: 6,
+    performer_id: 21,
+  },
+  {
+    id: 22,
+    movie_id: 6,
+    performer_id: 22,
+  },
+  {
+    id: 23,
+    movie_id: 6,
+    performer_id: 23,
+  },
+  {
+    id: 24,
+    movie_id: 6,
+    performer_id: 24,
+  },
+  {
+    id: 25,
+    movie_id: 7,
+    performer_id: 21,
+  },
+  {
+    id: 26,
+    movie_id: 7,
+    performer_id: 25,
+  },
+  {
+    id: 27,
+    movie_id: 7,
+    performer_id: 26,
+  },
+  {
+    id: 28,
+    movie_id: 7,
+    performer_id: 27,
+  },
+  {
+    id: 29,
+    movie_id: 8,
+    performer_id: 28,
+  },
+  {
+    id: 30,
+    movie_id: 8,
+    performer_id: 29,
+  },
+  {
+    id: 31,
+    movie_id: 8,
+    performer_id: 30,
+  },
+  {
+    id: 32,
+    movie_id: 8,
+    performer_id: 31,
+  },
+  {
+    id: 33,
+    movie_id: 9,
+    performer_id: 32,
+  },
+  {
+    id: 34,
+    movie_id: 9,
+    performer_id: 28,
+  },
+  {
+    id: 35,
+    movie_id: 9,
+    performer_id: 33,
+  },
+  {
+    id: 36,
+    movie_id: 9,
+    performer_id: 34,
+  },
+  {
+    id: 37,
+    movie_id: 10,
+    performer_id: 35,
+  },
+  {
+    id: 38,
+    movie_id: 10,
+    performer_id: 36,
+  },
+  {
+    id: 39,
+    movie_id: 10,
+    performer_id: 37,
+  },
+  {
+    id: 41,
+    movie_id: 10,
+    performer_id: 38,
+  },
+].each do |data|
+  movie_performers = MoviePerformer.find_or_initialize_by(id: data[:id])
+  movie_performers.movie_id = data[:movie_id]
+  movie_performers.performer_id = data[:performer_id]
+  movie_performers.save!
+end
+[
+  {
+    id: 1,
+    name: "アクション",
+  },
+  {
+    id: 2,
+    name: "ホラー",
+  },
+  {
+    id: 3,
+    name: "スリラー",
+  },
+  {
+    id: 4,
+    name: "アニメ",
+  },
+  {
+    id: 5,
+    name: "SF",
+  },
+  {
+    id: 6,
+    name: "アドベンチャー・冒険",
+  },
+  {
+    id: 7,
+    name: "恋愛",
+  },
+  {
+    id: 8,
+    name: "ドラマ",
+  },
+].each do |data|
+  genres = Genre.find_or_initialize_by(id: data[:id])
+  genres.name = data[:name]
+  genres.save!
+end
+[
+  {
+    id: 1,
+    movie_id: 1,
+    genre_id: 1,
+  },
+  {
+    id: 2,
+    movie_id: 2,
+    genre_id: 1,
+  },
+  {
+    id: 3,
+    movie_id: 3,
+    genre_id: 2,
+  },
+  {
+    id: 4,
+    movie_id: 3,
+    genre_id: 3,
+  },
+  {
+    id: 5,
+    movie_id: 4,
+    genre_id: 1,
+  },
+  {
+    id: 6,
+    movie_id: 5,
+    genre_id: 4,
+  },
+  {
+    id: 7,
+    movie_id: 6,
+    genre_id: 1,
+  },
+  {
+    id: 8,
+    movie_id: 6,
+    genre_id: 5,
+  },
+  {
+    id: 9,
+    movie_id: 6,
+    genre_id: 6,
+  },
+  {
+    id: 10,
+    movie_id: 7,
+    genre_id: 7,
+  },
+  {
+    id: 11,
+    movie_id: 7,
+    genre_id: 8,
+  },
+  {
+    id: 12,
+    movie_id: 8,
+    genre_id: 1,
+  },
+  {
+    id: 13,
+    movie_id: 9,
+    genre_id: 1,
+  },
+  {
+    id: 14,
+    movie_id: 10,
+    genre_id: 5,
+  },
+  {
+    id: 15,
+    movie_id: 10,
+    genre_id: 6,
+  },
+  {
+    id: 16,
+    movie_id: 10,
+    genre_id: 8,
+  },
+].each do |data|
+  movie_genres = MovieGenre.find_or_initialize_by(id: data[:id])
+  movie_genres.movie_id = data[:movie_id]
+  movie_genres.genre_id = data[:genre_id]
+  movie_genres.save!
+end
