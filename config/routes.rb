@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :movies, only: [:index, :show]
   get '' => 'home#top'
-  get 'movies' => 'home#movies'
   get 'genre' => 'home#genre'
   get 'search' => 'home#search'
   get 'amazon' => 'home#amazon'

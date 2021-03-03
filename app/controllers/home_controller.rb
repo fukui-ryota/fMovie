@@ -26,5 +26,5 @@ class HomeController < ApplicationController
   end
   
   def netflix
-  end  
+  end
 end
