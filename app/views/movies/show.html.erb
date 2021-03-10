@@ -23,7 +23,7 @@
               </tr>
               <tr>
                 <th scope="row">ジャンル</th>
-                <td><%= @movie.directors.map(&:name).join('/') %></td>
+                <td><%= @movie.genres.map(&:name).join('/') %></td>
               </tr>
             </tbody>
           </table>
@@ -72,7 +72,7 @@
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>映画サービス</p>
+        <p>fMovie</p>
       </blockquote>
     </div>
   </div>

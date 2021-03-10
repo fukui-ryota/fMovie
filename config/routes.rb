@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'maps/index' => 'maps#index'
+  resources :maps, only: [:index]
+
   devise_for :users
   resources :movies, only: [:index, :show]
   get '' => 'home#top'

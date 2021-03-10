@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def top
-    @movies = Movie.all.order(id: :desc).limit(3)
+    @desc = Movie.all.order(id: :desc).limit(3)
+    @asc = Movie.all.order(id: :asc).limit(3)
     @random = Movie.all.order("RANDOM()").limit(5)
   end
   
@@ -17,6 +18,7 @@ class HomeController < ApplicationController
   end
   
   def search
+    @movies = Movie.where('title like ?', "%#{params[:search]}%")
   end
   
   def amazon

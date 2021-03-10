@@ -12,12 +12,12 @@
     <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
       <ol class="carousel-indicators">
-        <% @movies.each_with_index do |movie, i| %>
+        <% @random.each_with_index do |movie, i| %>
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="<%= i == 0 ? 'active' : '' %>"></li>
         <% end %>
       </ol>
       <div class="carousel-inner">
-        <% @movies.each_with_index do |movie, i| %>
+        <% @random.each_with_index do |movie, i| %>
           <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
             <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
@@ -42,12 +42,12 @@
         </div>
         <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-            <% @movies.each_with_index do |movie, i| %>
+            <% @desc.each_with_index do |movie, i| %>
               <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="<%= i == 0 ? 'active' : '' %>"></li>
             <% end %>
           </ol>
           <div class="carousel-inner">
-            <% @movies.each_with_index do |movie, i| %>
+            <% @desc.each_with_index do |movie, i| %>
             <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
               <%= link_to movie_path(movie) do %>
                 <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
@@ -73,16 +73,18 @@
         </div>
         <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-            <% @random.each_with_index do |movie, i| %>
+            <% @asc.each_with_index do |movie, i| %>
               <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="<%= i == 0 ? 'active' : '' %>"></li>
             <% end %>
           </ol>
           <div class="carousel-inner">
-            <% @random.each_with_index do |movie, i| %>
+            <% @asc.each_with_index do |movie, i| %>
             <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
-              <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-              </div>
+              <%= link_to movie_path(movie) do %>
+                <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              <% end %>
             </div>
             <% end %>
           </div>

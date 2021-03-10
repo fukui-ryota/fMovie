@@ -1,63 +1,46 @@
 <body>
   <div class="container">
     <h3 class="text-center mt-5">検索結果に関する映画</h3>
+    <% @movies.each do |movie| %>
     <div class="card my-5">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="https://d2ueuvlup6lbue.cloudfront.net/attachments/9fd6f2937233b6ff9f4f8950494357b0e5ba6782/store/fitpad/300/400/602643410621dccb9cac41f90c5fa0c50956c53e2b32558e94adfa3310fa/_.jpg" class="mw-100" alt="...">
+          <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
         </div>
         <div class="col-md-8 row ml-2">
           <div class="card-body">
-            <h3 class="card-title mb-4">映画タイトル</h3>
-            <p class="card-text">評価　上映時間　上映年</p>
-            <p class="card-text">ここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書く</small></p>
+            <h3 class="card-title mb-4"><%= movie.title %></h3>
+            <p class="card-text">評価　上映時間:<%= movie.screening_time %>　上映年:<%= movie.screening_date.strftime("%Y年%m月%d日") %></p>
+            <p class="card-text"><%= movie.description %></small></p>
           </div>
-          <ul class="list-group list-group-flush col-2 ml-3">
-            <li class="list-group-item">監督</li>
-            <li class="list-group-item">出演</li>
-            <li class="list-group-item">ジャンル</li>
-          </ul>
-          <ul class="list-group list-group-flush col-4 ml-3">
-            <a href="#" class="list-group-item list-group-item-action">監督</a>
-            <a href="#" class="list-group-item list-group-item-action">出演</a>
-            <a href="#" class="list-group-item list-group-item-action">ジャンル</a>
-          </ul>
+          <table class="table col-11 pl-2">
+            <tbody>
+              <tr>
+                <th scope="row">監督</th>
+                <td><%= movie.directors.map(&:name).join('/') %></td>
+              </tr>
+              <tr>
+                <th scope="row">出演</th>
+                <td><%= movie.performers.map(&:name).join('/') %></td>
+              </tr>
+              <tr>
+                <th scope="row">ジャンル</th>
+                <td><%= movie.genres.map(&:name).join('/') %></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-    <div class="card my-5">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img style="height: 400px; width: 100%; object-fit: contain; background-color: black;" src="https://d2ueuvlup6lbue.cloudfront.net/attachments/9fd6f2937233b6ff9f4f8950494357b0e5ba6782/store/fitpad/300/400/602643410621dccb9cac41f90c5fa0c50956c53e2b32558e94adfa3310fa/_.jpg" class="mw-100" alt="...">
-        </div>
-        <div class="col-md-8 row ml-2">
-          <div class="card-body">
-            <h3 class="card-title mb-4">映画タイトル</h3>
-            <p class="card-text">評価　上映時間　上映年</p>
-            <p class="card-text">ここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書くここにあらすじを書く</small></p>
-          </div>
-          <ul class="list-group list-group-flush col-2 ml-3">
-            <li class="list-group-item">監督</li>
-            <li class="list-group-item">出演</li>
-            <li class="list-group-item">ジャンル</li>
-          </ul>
-          <ul class="list-group list-group-flush col-4 ml-3">
-            <a href="#" class="list-group-item list-group-item-action">監督</a>
-            <a href="#" class="list-group-item list-group-item-action">出演</a>
-            <a href="#" class="list-group-item list-group-item-action">ジャンル</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+    <% end %>
+  </div>  
   <div class="card text-center">
     <div class="card-header">
       <a href="#" class="btn btn-primary">トップへ戻る</a>
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>映画サービス</p>
+        <p>fMovie</p>
       </blockquote>
     </div>
   </div>
