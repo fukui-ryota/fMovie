@@ -11,10 +11,11 @@
         <a href="#" class="list-group-item list-group-item-action">SF</a>
         <a href="#" class="list-group-item list-group-item-action">コメディ</a>
       </div>
+      <% @movies.each do |movie| %>
       <div class="card col-9">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img style="height: 400px; width: 100%; object-fit: contain; background-color: white;" src="https://d2ueuvlup6lbue.cloudfront.net/attachments/9fd6f2937233b6ff9f4f8950494357b0e5ba6782/store/fitpad/300/400/602643410621dccb9cac41f90c5fa0c50956c53e2b32558e94adfa3310fa/_.jpg" class="mw-100" alt="...">
+          <img style="height: 400px; width: 100%; object-fit: contain; background-color: white;" src="<%= movie.thumbnail_url %>" class="mw-100" alt="...">
         </div>
         <div class="col-md-8 row ml-2">
           <div class="card-body">
@@ -35,6 +36,7 @@
         </div>
       </div>
     </div>
+    <% end %>
     </div>
   </div>
     

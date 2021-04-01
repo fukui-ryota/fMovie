@@ -2,6 +2,7 @@
   <div class="container">
     <h3 class="text-center mt-5">検索結果に関する映画</h3>
     <% @movies.each do |movie| %>
+    <%= link_to movie_path(movie) do %>
     <div class="card my-5">
       <div class="row no-gutters">
         <div class="col-md-4">
@@ -32,6 +33,7 @@
         </div>
       </div>
     </div>
+    <% end %>
     <% end %>
   </div>  
   <div class="card text-center">

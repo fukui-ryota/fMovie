@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210223191444) do
+ActiveRecord::Schema.define(version: 20210401175159) do
 
   create_table "directors", force: :cascade do |t|
     t.string   "name",       null: false
@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20210223191444) do
     t.text     "thumbnail_url",  null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.text     "amazon_url"
+    t.text     "u_next_url"
+    t.text     "netflix_url"
   end
 
   create_table "performers", force: :cascade do |t|
