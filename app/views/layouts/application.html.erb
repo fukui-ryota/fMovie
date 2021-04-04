@@ -91,15 +91,19 @@
           </div>
           <div class="w-100"></div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio2" value="8"  <%= @subscription_id == '1' ? 'checked' : '' %>>
+            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio1" value="" checked>
+            <label class="form-check-label" for="inlineRadio1">すべて</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio2" value="1"  <%= @subscription_id == '1' ? 'checked' : '' %>>
             <label class="form-check-label" for="inlineRadio2">Amazon Prime Video</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio2" value="8"  <%= @subscription_id == '2' ? 'checked' : '' %>>
+            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio2" value="2"  <%= @subscription_id == '2' ? 'checked' : '' %>>
             <label class="form-check-label" for="inlineRadio2">U-NEXT</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio2" value="8"  <%= @subscription_id == '3' ? 'checked' : '' %>>
+            <input class="form-check-input" type="radio" name="subscription_id" id="inlineRadio2" value="3"  <%= @subscription_id == '3' ? 'checked' : '' %>>
             <label class="form-check-label" for="inlineRadio2">Netflix</label>
           </div>
             

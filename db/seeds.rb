@@ -16,7 +16,7 @@
     description: 'ロンドンの高級テーラー「キングスマン」。しかしその実体は、どこの国にも属さない世界最強のスパイ機関だった！高級テーラー「キングスマン」。その裏の顔は世界最強のスパイ機関である。ブリティッシュ・スーツをスタイリッシュに着こなすハリー（コリン・ファース）は、そのエリートスパイ。組織の指揮者アーサー（マイケル・ケイン）の指令で、何者かに惨殺されたエージェントの代わりに新人をスカウトすることに。ハリーは街の若者エグジー（タロン・エガートン）に可能性を見出し、「キングスマン」の候補生に抜擢。実はハリーは、死んだエグジーの父と旧知の仲で、ある約束を果たそうとしていたのだった。一方で、頻発する科学者失踪事件の首謀者でＩＴ富豪のヴァレンタイン（サミュエル・Ｌ・ジャクソン）が、前代未聞の人類抹殺計画を進めていた。調査を開始した「キングスマン」にも、ヴァレンタインの魔の手が迫る。果たして、エグジーはキングスマンの一員となれるのか。そして、「キングスマン」はテロを阻止できるのか。世界最強のスパイ機関、ついに出動！',
     screening_time: 129,
     screening_date: '2015-09-11',
-    thumbnail_url: 'https://d2ueuvlup6lbue.cloudfront.net/attachments/af82687382d685c9d4b8b707d7c6db46554e8d55/store/fitpad/300/400/19fa193e930a04eacac31e073424d863e11bee869835adb4ac109eeecde6/_.jpg',
+    thumbnail_url: 'https://www.amazon.co.jp/images/I/91G2tvFuunL._RI_.jpg',
     amazon_url: 'https://www.amazon.co.jp/%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%9E%E3%83%B3-%E5%AD%97%E5%B9%95%E7%89%88-%E3%82%B3%E3%83%AA%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9/dp/B017SNHD9M/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=26NNLNLQNKKDR&dchild=1&keywords=%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%9E%E3%83%B3&qid=1617270788&s=instant-video&sprefix=%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%9E%E3%83%B3%2Cinstant-video%2C276&sr=1-2',
     u_next_url: '',
     netflix_url: '',
