@@ -17,8 +17,6 @@ class HomeController < ApplicationController
   def genre
     @search = params[:search]
     @genre_id = params[:genre_id]
-    pp '========================='
-    pp @genre_id
     @movies = Movie.where('title like ?', "%#{@search}%")
     @moveis = @movies.joins(:genres).where('genres.id = ?', @genre_id) if @genre_id.present?
   end
@@ -26,9 +24,11 @@ class HomeController < ApplicationController
   def search
     @search = params[:search]
     @genre_id = params[:genre_id]
+    @subscription_id = params[:subscription_id]
     @movies = Movie.all
     @movies = @movies.where('title like ?', "%#{@search}%") if @search.present?
     @movies = @movies.joins(:movie_genres).where('movie_genres.genre_id = ?', @genre_id) if @genre_id.present?
+    @movies = @movies.joins(:movie_subscriptions).where('movie_subscriptions.subscription_id = ?', @subscription_id) if @subscription_id.present?
   end
   
   def amazon
